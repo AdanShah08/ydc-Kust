@@ -56,12 +56,54 @@ nav ul li a:hover {
     color: orangered;
 }
 
-/* Hamburger Menu */
+/* Hamburger Icon */
 .hamburger {
     display: none;
     font-size: 1.5rem;
     cursor: pointer;
 }
+
+.hamburger i {
+    color: #000; /* Change this to your desired color */
+}
+
+/* Mobile Navigation Menu */
+#nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+#nav-menu li {
+    display: inline-block;
+}
+
+#nav-menu a {
+    text-decoration: none;
+    color: #000;
+    font-size: 18px;
+}
+
+/* Mobile-specific styles */
+@media screen and (max-width: 768px) {
+    #nav-menu {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        text-align: center;
+        padding: 0;
+        margin-top: 20px;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    #nav-menu.active {
+        display: block;
+    }
+}
+
 
 /* Hero Section */
 .hero {
@@ -160,7 +202,7 @@ nav ul li a:hover {
     background-color: #717171;
   }
   
-  //* Fading animation */
+  /* Fading animation */
 .fade {
     animation: fade 1.5s ease-in-out;
 }
